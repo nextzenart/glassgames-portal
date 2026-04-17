@@ -6,7 +6,11 @@
     { "source": "/2048", "destination": "https://glass-2048.vercel.app" },
     { "source": "/2048/:path*", "destination": "https://glass-2048.vercel.app/:path*" },
     { "source": "/snake", "destination": "https://glass-snake.vercel.app" },
-    { "source": "/snake/:path*", "destination": "https://glass-snake.vercel.app/:path*" }
+    { "source": "/snake/:path*", "destination": "https://glass-snake.vercel.app/:path*" },
+    { "source": "/memory", "destination": "https://glass-memory.vercel.app" },
+    { "source": "/memory/:path*", "destination": "https://glass-memory.vercel.app/:path*" },
+    { "source": "/tetris", "destination": "https://glass-tetris-ten.vercel.app" },
+    { "source": "/tetris/:path*", "destination": "https://glass-tetris-ten.vercel.app/:path*" }
   ],
   "headers": [
     {
