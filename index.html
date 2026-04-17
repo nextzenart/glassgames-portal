@@ -501,21 +501,13 @@
       </div>
     </a>
 
-  </div>
-
-  <!-- ===== Coming Soon ===== -->
-  <div class="section-header" data-section="soon">
-    <h2>곧 출시</h2>
-    <span class="badge">COMING SOON</span>
-  </div>
-
-  <div class="games-grid" id="games-soon" data-section="soon">
-
     <!-- Glass Memory -->
-    <div class="game-card coming-soon" data-cat="puzzle">
+    <a href="/memory" class="game-card" data-cat="puzzle">
       <div class="card-preview preview-memory">
         <div class="placeholder">Memory</div>
-        <span class="coming-soon-badge">COMING SOON</span>
+        <div class="card-play-btn">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
       </div>
       <div class="card-info">
         <h3>Glass Memory</h3>
@@ -526,13 +518,15 @@
           <span class="tag time">평균 3분</span>
         </div>
       </div>
-    </div>
+    </a>
 
     <!-- Glass Tetris -->
-    <div class="game-card coming-soon" data-cat="puzzle">
+    <a href="/tetris" class="game-card" data-cat="puzzle">
       <div class="card-preview preview-tetris">
         <div class="placeholder">Tetris</div>
-        <span class="coming-soon-badge">COMING SOON</span>
+        <div class="card-play-btn">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
       </div>
       <div class="card-info">
         <h3>Glass Tetris</h3>
@@ -543,7 +537,7 @@
           <span class="tag time">무한 반복</span>
         </div>
       </div>
-    </div>
+    </a>
 
   </div>
 
@@ -567,9 +561,8 @@
 <script>
   // Category filter
   const sections = [
-    { id: 'live', header: document.querySelector('.section-header[data-section="live"]'), grid: document.querySelector('.games-grid[data-section="live"]') },
-    { id: 'soon', header: document.querySelector('.section-header[data-section="soon"]'), grid: document.querySelector('.games-grid[data-section="soon"]') }
-  ];
+    { id: 'live', header: document.querySelector('.section-header[data-section="live"]'), grid: document.querySelector('.games-grid[data-section="live"]') }
+  ].filter(s => s.header && s.grid);
   const emptyState = document.getElementById('emptyState');
 
   function applyFilter(cat) {
